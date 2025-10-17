@@ -17,6 +17,7 @@
         android:textColor="#A71F1F"
         android:textSize="26sp"
         android:textStyle="bold"
+        android:fontFamily="@font/quicksandbold"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -30,6 +31,7 @@
         android:text="Welcome back!"
         android:textColor="#000000"
         android:textSize="16sp"
+        android:fontFamily="@font/quicksand"
         app:layout_constraintTop_toBottomOf="@id/tvLoginTitle"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -67,6 +69,7 @@
                 android:textColor="#000000"
                 android:textColorHint="#888888"
                 android:background="@drawable/edittext_background"
+                android:fontFamily="@font/quicksand"
                 android:layout_marginBottom="12dp" />
 
             <!-- Input Password -->
@@ -81,7 +84,8 @@
                 android:paddingEnd="12dp"
                 android:textColor="#000000"
                 android:textColorHint="#888888"
-                android:background="@drawable/edittext_background" />
+                android:background="@drawable/edittext_background"
+                android:fontFamily="@font/quicksand" />
 
             <!-- Tombol Login -->
             <com.google.android.material.button.MaterialButton
@@ -94,6 +98,7 @@
                 android:textColor="#FFFFFF"
                 android:layout_marginTop="20dp"
                 android:backgroundTint="#A71F1F"
+                android:fontFamily="@font/quicksandbold"
                 app:cornerRadius="24dp" />
 
             <!-- Logo kecil di pojok kanan bawah -->
@@ -103,36 +108,44 @@
                 android:layout_height="36dp"
                 android:layout_gravity="end"
                 android:layout_marginTop="8dp"
-                android:src="@drawable/Logo"/>
-
-
+                android:src="@drawable/logo"
+                />
         </LinearLayout>
     </androidx.cardview.widget.CardView>
 
-    <!-- Teks bawah: Sign Up -->
-    <TextView
-        android:id="@+id/tvSignupPrompt"
+    <!-- Container horizontal untuk teks bawah -->
+    <LinearLayout
+        android:id="@+id/llSignupText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Don't have account? "
-        android:textStyle="bold"
-        android:textSize="14sp"
-        android:textColor="#000000"
+        android:orientation="horizontal"
         app:layout_constraintTop_toBottomOf="@id/cardLoginForm"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="32dp" />
+        android:gravity="center"
+        android:layout_marginTop="32dp">
 
-    <!-- Tautan Sign Up -->
-    <TextView
-        android:id="@+id/tvSignupLink"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Sign Up"
-        android:textSize="14sp"
-        android:textStyle="bold"
-        android:textColor="#A71F1F"
-        app:layout_constraintBaseline_toBaselineOf="@id/tvSignupPrompt"
-        app:layout_constraintStart_toEndOf="@id/tvSignupPrompt" />
+        <!-- Teks “Don't have account?” -->
+        <TextView
+            android:id="@+id/tvSignupPrompt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Don't have account? "
+            android:textStyle="bold"
+            android:textSize="14sp"
+            android:textColor="#000000"
+            android:fontFamily="@font/quicksand" />
+
+        <!-- Teks “Sign Up” -->
+        <TextView
+            android:id="@+id/tvSignupLink"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sign Up"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:textColor="#A71F1F"
+            android:fontFamily="@font/quicksandbold" />
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

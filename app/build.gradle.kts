@@ -4,7 +4,7 @@ plugins {
 
 android {
     namespace = "edu.uph.m23si3.manuk"
-    compileSdk = 35
+    compileSdk = 36
 
     defaultConfig {
         applicationId = "edu.uph.m23si3.manuk"
