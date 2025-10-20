@@ -12,6 +12,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Manuk"
         tools:targetApi="31">
+
+        <activity
+            android:name=".RegisterActivity"
+            android:exported="false" />
         <activity
             android:name=".LoginActivity"
             android:exported="true">
